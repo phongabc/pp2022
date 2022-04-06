@@ -103,45 +103,7 @@ def findCourseName(courses, course_id):
     print("Err: Invalid ID")
 
 
-if __name__ == "__main__":
-    students = []
-    courses = []
 
-    student_num = numOfStudent()
-    print(student_num)
-    for i in range(0, student_num):
-        id, name, dob = studentInfo()
-        students.append(Student(id, name, dob))
-
-    course_num = numOfCourse()
-    for i in range(0, course_num):
-        id, name = courseInfo()
-        courses.append(Course(id, name))
-
-    print("Display students information:\n")
-    for student in students:
-        student.displayStudent()
-
-    print("Display courses information:\n")
-    for course in courses:
-        course.displayCourse()
-
-    x = 'y'
-    while x == 'y':
-        sel_course_id = input("Select a course ID: ")
-        sel_course = findCourseName(courses, sel_course_id)
-        print("Course name: " + sel_course + "\n")
-        for student in students:
-            mark = input("Enter " + student.name + "'s mark: ")
-            student.set_mark(sel_course, mark)
-        x = input("Do you want to select another course? y/n: ")
-        print("-------")
-
-    sel_course_id = input("Select a displayed course ID: ")
-    sel_course = findCourseName(courses, sel_course_id)
-    print(f"Display students' marks of course {sel_course}:\n")
-    for student in students:
-        student.displayMark(sel_course)
 
 while True:
     print(f'''\n
