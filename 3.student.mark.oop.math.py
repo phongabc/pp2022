@@ -61,47 +61,6 @@ class Course:
         print("Course name: " + self.name)
         print("-------")
 
-def numOfStudent():
-    while True:
-        try:
-            std_num = int(input("Enter number of student in the class: "))
-            print("-------")
-            return std_num
-        except ValueError:
-            print("Invalid number.")
-
-
-def studentInfo():
-    std_id = input("Enter student ID: ")
-    std_name = input("Enter student name: ")
-    std_dob = input("Enter student date of birth: ")
-    print("-------")
-    return std_id, std_name, std_dob
-
-
-def numOfCourse():
-    while True:
-        try:
-            course_num = int(input("Enter number of courses: "))
-            print("-------")
-            return course_num
-        except ValueError:
-            print("Err: Invalid number.")
-
-
-def courseInfo():
-    course_id = input("Enter course ID: ")
-    course_name = input("Enter course name: ")
-    print("-------")
-    return course_id, course_name
-
-
-def findCourseName(courses, course_id):
-    for course in courses:
-        if course.get_id() == course_id:
-            return course.get_name()
-    print("Err: Invalid ID")
-
 
 
 
